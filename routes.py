@@ -1,7 +1,7 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint
 
-main = Blueprint('main', __name__)
+main_bp = Blueprint("main", __name__)
 
-@main.route("/")
+@main_bp.route("/")
 def home():
-    return jsonify({"message": "Backend is running"})
+    return {"message": "Backend API running"}
